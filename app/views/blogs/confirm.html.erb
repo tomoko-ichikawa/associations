@@ -1,0 +1,9 @@
+<h3>以下の内容で、投稿する</h3>
+<%= form_with(model: @blog, url: blogs_path, local: true) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <p>title:<%= @blog.title %></p>
+  <p>content:<%= @blog.content %></p>
+  <%= form.submit %>
+  <%= form.submit 'back', name: 'back' %>
+<% end %>
