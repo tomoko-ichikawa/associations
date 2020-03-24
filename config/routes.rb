@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :blogs do
+    resources :favorites, only: [:create, :destroy]
     collection do
       post :confirm
     end
@@ -7,5 +8,4 @@ Rails.application.routes.draw do
 
   resources :users, only:[:new, :create, :show]
   resources :sessions, only:[:new, :create, :destroy]
-  resources :favorites, only: [:create, :destroy]
 end

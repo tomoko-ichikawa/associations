@@ -25,8 +25,8 @@ class BlogsController < ApplicationController
 
   def confirm
     @blog = current_user.blogs.build(blog_params)
-      @user = @blog.user
-      @user.name
+    @user = @blog.user
+    @user.name
   end
 
 
